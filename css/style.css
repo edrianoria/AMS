@@ -1,0 +1,1638 @@
+@media only screen and (min-device-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    /* Body CSS */
+    body {
+        background: linear-gradient(to bottom, rgb(0, 128, 53),rgb(3, 160, 3), yellow) no-repeat;
+        min-height: 100vh;
+    }
+    
+    /* Fieldset CSS */
+    fieldset {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        border: 2px solid rgb(0, 128, 53);
+        border-radius: 10px;
+    }
+    
+    
+    .width-100 {
+        width: 100%;
+    }
+    
+    .danger {
+        border: 2px solid rgb(218, 19, 19);
+        border-radius: 5px;
+        background: rgb(255, 144, 144);
+        color: rgb(218, 19, 19);
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .success {
+        border: 2px solid rgb(18, 170, 18);
+        border-radius: 5px;
+        background: rgb(144, 255, 144);
+        color: rgb(18, 170, 18);
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    
+    }
+    
+    /* Legend CSS */
+    legend {
+        font-size: 1.3em;
+        text-transform: uppercase;
+    }
+    
+    /* Container CSS */
+    .container {
+        width: 100%;
+        min-height: 100vh;
+        background: white;
+    }
+    
+    /* Login CSS */
+    .login-logo {
+        width: 200px;
+        height: 100px;
+    }
+    
+    .login {
+        width: 300px;
+        min-height: 390px;
+        margin: 150px auto;
+        text-align: center;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.322);
+    }
+    
+    /* Register CSS */
+    .register-logo {
+        width: 200px;
+        height: 100px;
+        clear: left;
+    }
+    
+    .register {
+        width: 300px;
+        min-height: 550px;
+        margin: 85px auto;
+        text-align: center;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.322);
+    }
+    
+    .register .a-left {
+        float: left;
+        text-decoration: none;
+    }
+    
+    /* Forgot Password CSS */
+    .forgot-logo {
+     width: 200px;
+     height: 100px;
+    }
+    
+    .forgot {
+        width: 450px;
+        min-height: 360px;
+        margin: 150px auto;
+        text-align: center;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.322);
+    }
+    
+    .forgot .a-left {
+        float: left;
+        text-decoration: none;
+    }
+    
+    /* New Password CSS */
+    .newpass-logo {
+        width: 200px;
+        height: 100px;
+    }
+    
+    .newpass {
+        width: 450px;
+        min-height: 360px;
+        margin: 150px auto;
+        text-align: center;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.322);
+    }
+    
+    .newpass .a-left {
+        float: left;
+        text-decoration: none;
+    }
+    
+    /* Email Verification CSS */
+    .verify-logo {
+        width: 200px;
+        height: 100px;
+       }
+    
+    .verify {
+        width: 450px;
+        min-height: 410px;
+        margin: 120px auto;
+        text-align: center;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.322);
+    }
+    
+    .verify .a-left {
+        float: left;
+        text-decoration: none;
+    }
+    
+    /* Side navigation bar & Header CSS */
+    .navbar {
+        position: fixed;
+        width: 250px;
+        height: 100%;
+        background:rgb(0, 128, 53);
+        left: -100%;
+        transition: 0.8s ease-in-out;
+    }
+    
+    .navbar ul {
+        list-style: none;
+    }
+    
+    .navbar ul li {
+        padding: 10px;
+        border-bottom: 2px solid rgba(0,0,0,0.05);
+        border-top: 2px solid rgba(225,225,225,0.05);
+    }
+    
+    .navbar ul li:hover {
+        background: rgb(3, 150, 64);
+    }
+    
+    .navbar ul li a {
+        text-decoration: none;
+        font-size: 1.2em;
+        color: white;
+    }
+
+    .navbar .profile {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+
+    .navbar .h1 {
+        color: white;
+        font-size: 1.3em;
+    }
+
+    .nav-profile {
+        text-align: center;
+    }
+
+    .nav-profile a {
+        text-decoration: none;
+    }
+    
+    .header {
+        background: rgb(20, 160, 78);
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .header .checkbtn {
+        color: white;
+        cursor: pointer;
+    }
+    
+    .header #check {
+        display: none;
+    }
+    
+    .header h1 {
+        font-size: 1.5em;
+        color: white;
+        flex: 2;
+        text-align: center;
+    }
+    
+    .header .checkbtn .fa-bars {
+        font-size: 30px;
+    }
+    
+    .footer {
+        border-top: 2px solid rgb(20, 160, 78);
+        width: 100%;
+        max-height: 15% !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        padding: 10px;
+    }
+
+    .copyright {
+        flex: 3;
+        display: flex;
+        align-items: flex-end;
+        justify-content: left;
+    }
+
+    .copyright a {
+        width: 75px;
+        height: 35px;
+        margin-right: 5px;
+        text-decoration: none;
+    }
+    
+    .copyright img {
+        width: 75px;
+        height: 35px;
+    }
+
+    .copyright p {
+        font-size: 1.1em;
+    }
+
+    .social-media {
+        flex: 1;
+        text-align: justify;
+    }
+
+    .social-media a {
+        color: black;
+        display: block;
+        padding: 1px 0;
+        font-size: 1.1em;
+        text-decoration: none;
+    }
+
+    .social-media b {
+        font-size: 1.3em;
+    }
+    
+    /* Home page CSS */
+    .home-logo {
+        width: 200px;
+        height: 100px;
+        background: white;
+    }
+    
+    .home-content {
+        width: 60%;
+        min-height: 100%;
+        margin: 100px auto;
+        text-align: center;
+        padding: 0 20px;
+        border: 2px solid rgb(0, 128, 53);
+        border-radius: 10px;
+    }
+    
+    .home-content h2 {
+        font-size: 1.4em;
+    }
+    
+    .home-content ul {
+        list-style-position: inside;
+        text-align: justify;
+    }
+    
+    .home-content .v-desc, .home-content .video-align {
+        text-align: center;
+    }
+
+    .home-content .prev-img {
+        text-align: center;
+    }
+    .home-content .prev-img img {
+        width: 100%;
+        border: 2px rgb(20, 160, 78) solid;
+        border-radius: 5px;
+    }
+
+    .profile-content {
+        width: 40%;
+        min-height: 40%;
+        margin: 200px auto;
+        padding: 0 20px;
+        border: 2px solid rgb(0, 128, 53);
+        border-radius: 10px;
+    }
+
+    .profile-content label {
+        font-size: 1em;
+    }
+
+    .profile-content form {
+        margin: 25px auto;
+    }
+
+    .profile-content form .grey {
+        color: grey;
+    }
+
+    .profile-content form .red {
+        padding: 7px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        color: white;
+        background: rgb(218, 19, 19);
+    }
+
+    .profile-content form .red:hover {
+        background: rgb(245, 34, 34);
+    }
+
+    .profile-content form .green {
+        padding: 8px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        color: white;
+        background: rgb(3, 160, 3);
+    }
+
+    .profile-content form .green:hover {
+        background: rgb(5, 180, 5);
+    }
+
+    .profile-content form img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+
+    .profile-content form .profile-float {
+        float: right;
+        width: 25%;
+        text-align: center;
+    }
+
+    .profile-float [type=file] {
+        display: none;
+    }
+
+    .profile-float #select-btn {
+        background: rgb(3, 160, 3);
+        color: white;
+        font-size: 1em;
+        padding: 8px 20px;
+        border-radius: 5px;
+    }
+
+    .profile-float #select-btn:hover {
+        background:rgb(5, 180, 5);
+    }
+
+    .verify-content {
+        width: 40%;
+        min-height: 40%;
+        margin: 200px auto;
+        padding: 0 20px;
+        border: 2px solid rgb(0, 128, 53);
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .verify-content form {
+        margin: 25px auto;
+    }
+
+    .verify-content form h1 {
+        font-size: 1.3em;
+    }
+
+    .verification {
+        width: 30%;
+        min-height: 40%;
+        margin: 200px auto;
+        padding: 0 20px;
+        border: 2px solid rgb(0, 128, 53);
+        border-radius: 10px;
+        text-align: center;
+        background: white;
+    }
+
+    .verification h1 {
+        font-size: 1.3em
+    }
+
+    .clear-fix {
+        clear: both;
+    }
+    
+    /* List of students CSS */
+    .lists-content {
+        width: 70%;
+        min-height: 100%;
+        margin: 100px auto;
+        text-align: center;
+        padding: 0 20px;
+        border: 2px solid rgb(0, 128, 53);
+        border-radius: 10px;
+    }
+    
+    /* Table CSS */
+    .table {
+        width: 100%;
+    }
+    
+    .table, th, td {
+        border: 1px solid grey;
+        border-collapse: collapse;
+    }
+    
+    /* Edit Student Information CSS */
+    .edit-content {
+        width: 65%;
+        min-height: 30%;
+        margin: 150px auto;
+        text-align: center;
+        padding: 0 20px;
+        border: 2px solid rgb(0, 128, 53);
+        border-radius: 10px;
+    }
+    
+    .attendance-content {
+        width: 65%;
+        min-height: 100%;
+        margin: 100px auto;
+        text-align: center;
+        padding: 0 20px;
+        border: 2px solid rgb(0, 128, 53);
+        border-radius: 10px;
+    }
+    
+    .total-content {
+        width: 72%;
+        min-height: 100%;
+        margin: 100px auto;
+        text-align: center;
+        padding: 0 20px;
+        border: 2px solid rgb(0, 128, 53);
+        border-radius: 10px;
+    }
+    
+    /* Margin Top CSS */
+    .mt-1 {
+        margin-top: 10px;
+    }
+    
+    .mt-2 {
+        margin-top: 20px;
+    }
+    
+    .mt-3 {
+        margin-top: 30px;
+    }
+    
+    .mt-4 {
+        margin-top: 40px;
+    }
+    
+    .mt-5 {
+        margin-top: 50px;
+    }
+    
+    /* Margin Bottom CSS */
+    .mb-1 {
+        margin-bottom: 10px;
+    }
+    
+    .mb-2 {
+        margin-bottom: 20px;
+    }
+    
+    .mb-3 {
+        margin-bottom: 30px;
+    }
+    
+    .mb-4 {
+        margin-bottom: 40px;
+    }
+    
+    .mb-5 {
+        margin-bottom: 50px;
+    }
+    
+    /* Margin Left CSS */
+    .ml-1 {
+        margin-left: 10px;
+    }
+    
+    .ml-2 {
+        margin-left: 20px;
+    }
+    
+    .ml-3 {
+        margin-left: 30px;
+    }
+    
+    .ml-4 {
+        margin-left: 40px;
+    }
+    
+    .ml-5 {
+        margin-left: 50px;
+    }
+    
+    /* Margin Right CSS */
+    .mr-1 {
+        margin-right: 10px;
+    }
+    
+    .mr-2 {
+        margin-right: 20px;
+    }
+    
+    .mr-3 {
+        margin-right: 30px;
+    }
+    
+    .mr-4 {
+        margin-right: 40px;
+    }
+    
+    .mr-5 {
+        margin-right: 50px;
+    }
+    
+    /* Padding Top CSS */
+    .pt-1 {
+        padding-top: 10px;
+    }
+    
+    .pt-2 {
+        padding-top: 20px;
+    }
+    
+    .pt-3 {
+        padding-top: 30px;
+    }
+    
+    .pt-4 {
+        padding-top: 40px;
+    }
+    
+    .pt-5 {
+        padding-top: 50px;
+    }
+    
+    /* Padding Bottom CSS */
+    .pb-1 {
+        padding-bottom: 10px;
+    }
+    
+    .pb-2 {
+        padding-bottom: 20px;
+    }
+    
+    .pb-3 {
+        padding-bottom: 30px;
+    }
+    
+    .pb-4 {
+        padding-bottom: 40px;
+    }
+    
+    .pb-5 {
+        padding-bottom: 50px;
+    }
+    
+    /* Padding Left CSS */
+    .pl-1 {
+        padding-left: 10px;
+    }
+    
+    .pl-2 {
+        padding-left: 20px;
+    }
+    
+    .pl-3 {
+        padding-left: 30px;
+    }
+    
+    .pl-4 {
+        padding-left: 40px;
+    }
+    
+    .pl-5 {
+        padding-left: 50px;
+    }
+    
+    /* Padding Right CSS */
+    .pr-1 {
+        padding-right: 10px;
+    }
+    
+    .pr-2 {
+        padding-right: 20px;
+    }
+    
+    .pr-3 {
+        padding-right: 30px;
+    }
+    
+    .pr-4 {
+        padding-right: 40px;
+    }
+    
+    .pr-5 {
+        padding-right: 50px;
+    }
+    
+    /* Padding CSS */
+    .p-1 {
+        padding: 10px;
+    }
+    
+    .p-2 {
+        padding: 20px;
+    }
+    
+    .p-3 {
+        padding: 30px;
+    }
+    
+    .p-4 {
+        padding: 40px;
+    }
+    
+    .p-5 {
+        padding: 50px;
+    }
+    
+    /* Inputs CSS */
+    
+    .button {
+        padding: 7px 20px;
+        font-size: 1em;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        background: rgb(3, 160, 3);
+    }
+    
+    .button:hover {
+        background:rgb(5, 180, 5);
+    }
+    
+    .select {
+        width: 250px;
+        height: 35px;
+        font-size: 1em;
+        border-radius: 5px;
+        border: 1px solid grey;
+    }
+    
+    [type=date] {
+        width: 250px;
+        height: 35px;
+        font-size: 1em;
+        border-radius: 5px;
+        border: 1px solid grey;
+        padding-left: 5px;
+    }
+    
+    [type=text] {
+        width: 250px;
+        height: 35px;
+        font-size: 1em;
+        border-radius: 5px;
+        border: 1px solid grey;
+        padding-left: 5px;
+    }
+    
+    [type=text]::-webkit-input-placeholder, [type=text]:disabled, option:disabled {
+        color: black;
+    }
+    
+    [type=password] {
+        width: 250px;
+        height: 35px;
+        font-size: 1em;
+        border-radius: 5px;
+        border: 1px solid grey;
+        padding-left: 5px;
+    }
+    
+    [type=password]::-webkit-input-placeholder {
+        color: black;
+    }
+    
+    [type=submit] {
+        padding: 7px 20px;
+        font-size: 1em;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        background: rgb(3, 160, 3);
+    }
+    
+    [type=submit]:hover {
+        background:rgb(5, 180, 5);
+    }
+    
+    /* Anchor CSS */
+    a {
+        color: grey;
+    }
+    
+    a:hover {
+        color: rgb(3, 160, 3);
+    }
+    
+    .pagination a {
+        display: inline-block;
+        text-decoration: none;
+        color: black;
+        padding: 5px 10px;
+        border: thin solid #555;
+        font-size: 1em;
+    }
+    
+    .pagination a.active {
+        background-color: rgb(3, 160, 3);
+        color: white;
+        border: thin solid rgb(0, 128, 53);
+    }
+    
+    .pagination a:focus {
+        border: 1px solid rgb(5, 180, 5);
+    }
+    
+    .pagination .page-info {
+        margin-top: 90px;
+        font-size: 1em;
+        font-weight: bold;
+    }
+    
+    .pagination .page-numbers {
+        display: inline-block;
+    }
+    
+    .print-container {
+        width: 100%;
+    }
+}
+
+@media print {
+    body * {
+      visibility: hidden !important;
+    }
+  
+    .print-container, .print-container * {
+      visibility: visible !important;
+    }
+  
+    .print-container {
+      position: absolute !important;
+      top: 120px !important;
+      left: 160px !important;
+    }
+
+    .print-container .table {
+        width: 100vw;
+    }
+    
+    .print-container .table, th, td {
+        border: 1px solid grey !important;
+        border-collapse: collapse !important;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .print-container .table a {
+        color: grey;
+    }
+  }
+
+@media only screen and (max-device-width: 375px){
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    /* Body CSS */
+    body {
+        background: linear-gradient(to bottom, rgb(0, 128, 53),rgb(3, 160, 3), yellow) no-repeat;
+        height: 100%;
+    }
+    
+    /* Fieldset CSS */
+    fieldset {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        border: 2px solid rgb(0, 128, 53);
+        border-radius: 10px;
+        justify-content: center;
+    }
+    
+    
+    .width-100 {
+        width: 100%;
+    }
+    
+    .danger {
+        border: 2px solid rgb(218, 19, 19);
+        border-radius: 5px;
+        background: rgb(255, 144, 144);
+        color: rgb(218, 19, 19);
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .success {
+        border: 2px solid rgb(18, 170, 18);
+        border-radius: 5px;
+        background: rgb(144, 255, 144);
+        color: rgb(18, 170, 18);
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    
+    }
+    
+    /* Legend CSS */
+    legend {
+        font-size: 1.1em;
+        text-transform: uppercase;
+    }
+    
+    /* Container CSS */
+    .container {
+        width: 100%;
+        height: 100vh;
+        background: white;
+    }
+    
+    /* Login CSS */
+    .login-logo {
+        width: 200px;
+        height: 100px;
+    }
+    
+    .login {
+        width: 300px;
+        min-height: 390px;
+        margin: 150px auto;
+        text-align: center;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.322);
+    }
+    
+    /* Register CSS */
+    .register-logo {
+        width: 200px;
+        height: 100px;
+        clear: left;
+    }
+    
+    .register {
+        width: 300px;
+        min-height: 550px;
+        margin: 85px auto;
+        text-align: center;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.322);
+    }
+    
+    .register .a-left {
+        float: left;
+        text-decoration: none;
+    }
+    
+    /* Forgot Password CSS */
+    .forgot-logo {
+     width: 200px;
+     height: 100px;
+    }
+    
+    .forgot {
+        width: 300px;
+        min-height: 360px;
+        margin: 150px auto;
+        text-align: center;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.322);
+    }
+    
+    .forgot .a-left {
+        float: left;
+        text-decoration: none;
+    }
+    
+    /* New Password CSS */
+    .newpass-logo {
+        width: 200px;
+        height: 100px;
+    }
+    
+    .newpass {
+        width: 300px;
+        min-height: 360px;
+        margin: 150px auto;
+        text-align: center;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.322);
+    }
+    
+    .newpass .a-left {
+        float: left;
+        text-decoration: none;
+    }
+    
+    /* Email Verification CSS */
+    .verify-logo {
+        width: 200px;
+        height: 100px;
+       }
+    
+    .verify {
+        width: 450px;
+        min-height: 410px;
+        margin: 120px auto;
+        text-align: center;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.322);
+    }
+    
+    .verify .a-left {
+        float: left;
+        text-decoration: none;
+    }
+    
+    /* Side navigation bar & Header CSS */
+    .navbar {
+        position: fixed;
+        width: 250px;
+        height: 100%;
+        background:rgb(0, 128, 53);
+        left: -100%;
+        transition: 0.8s ease-in-out;
+    }
+    
+    .navbar ul {
+        list-style: none;
+    }
+    
+    .navbar ul li {
+        padding: 10px;
+        border-bottom: 2px solid rgba(0,0,0,0.05);
+        border-top: 2px solid rgba(225,225,225,0.05);
+    }
+    
+    .navbar ul li:hover {
+        background: rgb(3, 150, 64);
+    }
+    
+    .navbar ul li a {
+        text-decoration: none;
+        font-size: 1.2em;
+        color: white;
+    }
+
+    .navbar .profile {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+
+    .navbar .h1 {
+        color: white;
+        font-size: 1.3em;
+    }
+
+    .nav-profile {
+        text-align: center;
+    }
+
+    .nav-profile a {
+        text-decoration: none;
+    }
+    
+    .header {
+        background: rgb(20, 160, 78);
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .header .checkbtn {
+        color: white;
+        cursor: pointer;
+    }
+    
+    .header #check {
+        display: none;
+    }
+    
+    .header h1 {
+        font-size: 1.3em;
+        color: white;
+        flex: 2;
+        text-align: justify;
+        margin-left: 20px;
+    }
+    
+    .header .checkbtn .fa-bars {
+        font-size: 30px;
+    }
+    
+    .footer {
+        border-top: 1px solid rgb(20, 160, 78);
+        width: 100%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 10px;
+    }
+
+    .copyright {
+        font-size: 1em;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        color: black;
+    }
+    
+    .copyright img {
+        width: 75px;
+        height: 35px;
+    }
+
+    .copyright p {
+        padding: 5px 0;
+    }
+
+    .social-media {
+        width: 100%;
+        color: black;
+    }
+
+    .social-media b {
+        font-size: 1.2em;
+    }
+
+    .social-media a {
+        color: black;
+        display: block;
+        text-decoration: none;
+        padding: 3px 0;
+    }
+    
+    /* Home page CSS */
+    .home-logo {
+        width: 200px;
+        height: 100px;
+        background: white;
+    }
+    
+    .home-content {
+        width: 80%;
+        min-height: 100%;
+        margin: 100px auto;
+        text-align: center;
+        padding: 0 20px;
+        border: 2px solid rgb(0, 128, 53);
+        border-radius: 10px;
+    }
+    
+    .home-content h2 {
+        font-size: 1.2em;
+    }
+    
+    .home-content ul {
+        list-style-position: inside;
+        text-align: justify;
+    }
+    
+    .home-content .v-desc, .home-content .video-align {
+        text-align: center;
+    }
+
+    .video {
+        width: 220px;
+        height: 110px;
+    }
+
+    .home-content .prev-img {
+        text-align: center;
+    }
+    .home-content .prev-img img {
+        width: 100%;
+        border: 2px rgb(20, 160, 78) solid;
+        border-radius: 5px;
+    }
+
+    .profile-content {
+        width: 90%;
+        min-height: 40%;
+        margin: 200px auto;
+        padding: 0 20px;
+        border: 2px solid rgb(0, 128, 53);
+        border-radius: 10px;
+    }
+
+    .profile-content label {
+        font-size: 1em;
+    }
+
+    .profile-content form {
+        margin: 25px auto;
+    }
+
+    .profile-content form .grey {
+        color: grey;
+    }
+
+    .profile-content form .red {
+        padding: 7px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        color: white;
+        background: rgb(218, 19, 19);
+    }
+
+    .profile-content form .red:hover {
+        background: rgb(245, 34, 34);
+    }
+
+    .profile-content form .green {
+        padding: 8px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        color: white;
+        background: rgb(3, 160, 3);
+    }
+
+    .profile-content form .green:hover {
+        background: rgb(5, 180, 5);
+    }
+
+    .profile-content form img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+
+    .profile-content form .profile-float {
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .profile-content form .mr-2{
+        margin-right: 5px;
+    }
+
+    .profile-float [type=file] {
+        display: none;
+    }
+
+    .profile-float #select-btn {
+        background: rgb(3, 160, 3);
+        color: white;
+        font-size: 1em;
+        padding: 8px 20px;
+        border-radius: 5px;
+    }
+
+    .profile-float #select-btn:hover {
+        background:rgb(5, 180, 5);
+    }
+
+    .verify-content {
+        width: 90%;
+        min-height: 40%;
+        margin: 200px auto;
+        padding: 0 20px;
+        border: 2px solid rgb(0, 128, 53);
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .verify-content form {
+        margin: 25px auto;
+    }
+
+    .verify-content form h1 {
+        font-size: 1.2em;
+    }
+
+    .verification {
+        width: 90%;
+        min-height: 40%;
+        margin: 200px auto;
+        padding: 0 20px;
+        border: 2px solid rgb(0, 128, 53);
+        border-radius: 10px;
+        text-align: center;
+        background: white;
+    }
+
+    .verification h1 {
+        font-size: 1.2em
+    }
+
+    .clear-fix {
+        clear: both;
+    }
+    
+    /* List of students CSS */
+    .lists-content {
+        width: 90%;
+        min-height: 100%;
+        margin: 100px auto;
+        text-align: center;
+        padding: 0 20px;
+        border: 2px solid rgb(0, 128, 53);
+        border-radius: 10px;
+    }
+    
+    /* Table CSS */
+    .table {
+        width: 100%;
+    }
+    
+    .table, th, td {
+        border: 1px solid grey;
+        border-collapse: collapse;
+    }
+    
+    /* Edit Student Information CSS */
+    .edit-content {
+        width: 90%;
+        min-height: 50%;
+        margin: 100px auto;
+        text-align: center;
+        padding: 0 20px;
+        border: 2px solid rgb(0, 128, 53);
+        border-radius: 10px;
+    }
+    
+    .attendance-content {
+        width: 90%;
+        min-height: 100%;
+        margin: 100px auto;
+        text-align: center;
+        padding: 0 20px;
+        border: 2px solid rgb(0, 128, 53);
+        border-radius: 10px;
+    }
+    
+    .total-content {
+        width: 90%;
+        min-height: 100%;
+        margin: 100px auto;
+        text-align: center;
+        padding: 0 20px;
+        border: 2px solid rgb(0, 128, 53);
+        border-radius: 10px;
+    }
+    
+    /* Margin Top CSS */
+    .mt-1 {
+        margin-top: 10px;
+    }
+    
+    .mt-2 {
+        margin-top: 20px;
+    }
+    
+    .mt-3 {
+        margin-top: 30px;
+    }
+    
+    .mt-4 {
+        margin-top: 40px;
+    }
+    
+    .mt-5 {
+        margin-top: 50px;
+    }
+    
+    /* Margin Bottom CSS */
+    .mb-1 {
+        margin-bottom: 10px;
+    }
+    
+    .mb-2 {
+        margin-bottom: 20px;
+    }
+    
+    .mb-3 {
+        margin-bottom: 30px;
+    }
+    
+    .mb-4 {
+        margin-bottom: 40px;
+    }
+    
+    .mb-5 {
+        margin-bottom: 50px;
+    }
+    
+    /* Margin Left CSS */
+    .ml-1 {
+        margin-left: 10px;
+    }
+    
+    .ml-2 {
+        margin-left: 20px;
+    }
+    
+    .ml-3 {
+        margin-left: 30px;
+    }
+    
+    .ml-4 {
+        margin-left: 40px;
+    }
+    
+    .ml-5 {
+        margin-left: 50px;
+    }
+    
+    /* Margin Right CSS */
+    .mr-1 {
+        margin-right: 10px;
+    }
+    
+    .mr-2 {
+        margin-right: 20px;
+    }
+    
+    .mr-3 {
+        margin-right: 30px;
+    }
+    
+    .mr-4 {
+        margin-right: 40px;
+    }
+    
+    .mr-5 {
+        margin-right: 50px;
+    }
+    
+    /* Padding Top CSS */
+    .pt-1 {
+        padding-top: 10px;
+    }
+    
+    .pt-2 {
+        padding-top: 20px;
+    }
+    
+    .pt-3 {
+        padding-top: 30px;
+    }
+    
+    .pt-4 {
+        padding-top: 40px;
+    }
+    
+    .pt-5 {
+        padding-top: 50px;
+    }
+    
+    /* Padding Bottom CSS */
+    .pb-1 {
+        padding-bottom: 10px;
+    }
+    
+    .pb-2 {
+        padding-bottom: 20px;
+    }
+    
+    .pb-3 {
+        padding-bottom: 30px;
+    }
+    
+    .pb-4 {
+        padding-bottom: 40px;
+    }
+    
+    .pb-5 {
+        padding-bottom: 50px;
+    }
+    
+    /* Padding Left CSS */
+    .pl-1 {
+        padding-left: 10px;
+    }
+    
+    .pl-2 {
+        padding-left: 20px;
+    }
+    
+    .pl-3 {
+        padding-left: 30px;
+    }
+    
+    .pl-4 {
+        padding-left: 40px;
+    }
+    
+    .pl-5 {
+        padding-left: 50px;
+    }
+    
+    /* Padding Right CSS */
+    .pr-1 {
+        padding-right: 10px;
+    }
+    
+    .pr-2 {
+        padding-right: 20px;
+    }
+    
+    .pr-3 {
+        padding-right: 30px;
+    }
+    
+    .pr-4 {
+        padding-right: 40px;
+    }
+    
+    .pr-5 {
+        padding-right: 50px;
+    }
+    
+    /* Padding CSS */
+    .p-1 {
+        padding: 10px;
+    }
+    
+    .p-2 {
+        padding: 20px;
+    }
+    
+    .p-3 {
+        padding: 30px;
+    }
+    
+    .p-4 {
+        padding: 40px;
+    }
+    
+    .p-5 {
+        padding: 50px;
+    }
+    
+    /* Inputs CSS */
+    
+    .button {
+        padding: 7px 20px;
+        font-size: 1em;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        background: rgb(3, 160, 3);
+    }
+    
+    .button:hover {
+        background:rgb(5, 180, 5);
+    }
+    
+    .select {
+        width: 240px;
+        height: 35px;
+        font-size: 1em;
+        border-radius: 5px;
+        border: 1px solid grey;
+    }
+    
+    [type=date] {
+        width: 240px;
+        height: 35px;
+        font-size: 1em;
+        border-radius: 5px;
+        border: 1px solid grey;
+        padding-left: 5px;
+    }
+    
+    [type=text] {
+        width: 240px;
+        height: 35px;
+        font-size: 1em;
+        border-radius: 5px;
+        border: 1px solid grey;
+        padding-left: 5px;
+    }
+    
+    [type=text]::-webkit-input-placeholder, [type=text]:disabled, option:disabled {
+        color: black;
+    }
+    
+    [type=password] {
+        width: 240px;
+        height: 35px;
+        font-size: 1em;
+        border-radius: 5px;
+        border: 1px solid grey;
+        padding-left: 5px;
+    }
+    
+    [type=password]::-webkit-input-placeholder {
+        color: black;
+    }
+    
+    [type=submit] {
+        padding: 7px 15px;
+        font-size: 1em;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        background: rgb(3, 160, 3);
+    }
+    
+    [type=submit]:hover {
+        background:rgb(5, 180, 5);
+    }
+    
+    /* Anchor CSS */
+    a {
+        color: grey;
+    }
+    
+    a:hover {
+        color: rgb(3, 160, 3);
+    }
+    
+    .pagination a {
+        display: inline-block;
+        text-decoration: none;
+        color: black;
+        padding: 3px 7px;
+        border: thin solid #555;
+        font-size: 1em;
+    }
+    
+    .pagination a.active {
+        background-color: rgb(3, 160, 3);
+        color: white;
+        border: thin solid rgb(0, 128, 53);
+    }
+    
+    .pagination a:focus {
+        border: 1px solid rgb(5, 180, 5);
+    }
+    
+    .pagination .page-info {
+        margin-top: 90px;
+        font-size: 1em;
+        font-weight: bold;
+    }
+    
+    .pagination .page-numbers {
+        display: inline-block;
+    }
+    
+    .print-container {
+        width: 200px;
+        overflow-x: scroll;
+        white-space: nowrap;
+    }
+}
